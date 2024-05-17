@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tag 종류</title>
+</head>
+<body>
+    <h1>tag 종류에 대해 배워보자!</h1>
+    <h2> 2번째 </h2>
+    <h3> 3번째 </h3>
+    <h4> 4번째 </h4>
+    <h5>5번째 </h5>
+    <h6>6번째 </h6>
+    <h7>7번째 </h7>  
+    <!-- 
+       h7태그는 존재하지 않는 태그
+        존재하지 않는 태그를 쓰면 오류가 뜨지 않고 기본 크기로 보여줌  -->
+
+        <p>여기는 본문 영역 긴 글을 작성할때 바람직함</p>
+       <br> 
+       <br>
+       <br> 
+        <p>여기는 본문 영역 긴 글을 작성할때 바람직함</p>
+
+        <h3>오늘의 할 일</h3>
+
+        <ul>
+
+            <li type="square">html 복습</li>
+            <li>git 명령어 복습</li>
+            <li>notion 정리</li>
+        </ul>
+
+        <!-- ul tag type attribute : disc(default)-지정하지 않으면 기본 자동 인식, square,circle, none -->
+
+       <h3> 아메리카노 만들기 </h3>
+
+        <ol type="A" start="2">
+            <!-- type 1(default), a,A,i,I
+                 start attr= 시작값을 기준으로 리스트 만듬(시작 번호),  reversed(내림차순)   -->
+
+            <li> <strong>물</strong> <em>100ml</em> 붓기 </li>
+            <li><b>얼음</b> 을 컵에 가득 넣기 </li>
+            <li><i>에스프레소</i> 샷 <u>넣어주면</u>  <del>완성이오</del> </li>
+
+        </ol>
+
+        <!-- 수평줄 태그 -->
+        <hr>
+
+        <!-- 목록태그의 중첩 사용 -->
+
+        <h2>내가 좋아하는 음식</h2>
+
+        <ul> 
+
+            <li>양식
+
+                <ul>
+
+                    <li>스파게티</li>
+                    <li>스테이크</li>
+                </ul>
+            </li>
+
+        
+            <li>한식
+
+                <ul>
+
+                    <li>국밥</li>
+                    <li>김치찌개</li>
+                </ul>
+            </li>
+            <li>일식
+
+                <ul>
+
+                    <li>사시미</li>
+                    <li>라멘</li>
+                </ul>
+            </li>
+        </ul>
+
+     
+
+           <h1> ydp 카페 </h1>
+           
+
+                <ul>
+                 
+                      <li> <H3>아메리카노</H3> 
+
+                            <ol> 
+                                <li>R: 3000WON</li>
+                                <li>L: 3500WON</li>
+                            </ol>
+                        
+                        </li>
+
+                        <li> <H3>딸기라떼</H3> 
+
+                            <ol> 
+                                <li>R: 3000WON</li>
+                                <li>L: 3500WON</li>
+                            </ol>
+                        
+                        </li>
+
+                        <li> <H3>레몬에이드</H3> 
+
+                            <ol> 
+                                <li>R: 3000WON</li>
+                                <li>L: 3500WON</li>
+                            </ol>
+                        
+                        </li>
+
+
+                 </ul>
+                
+
+                <hr>
+
+                <P>
+                    <h3>음료 설명</h3>
+                    <br>
+
+                    아메리카노는 <b>물</b>에 에스프레소 샷을 탄 음료입니다.
+
+                    <br>
+                    
+                    카페라떼는 <b>우유</b>에 에스프레소 샷을 탄 음료입니다.
+                    <br>
+                     유기농 딸기를 넣고 만든 <b>생과일</b> 주스 입니다.
+                    <br>
+
+                    레몬 착즙 주스와 <b>탄산수</b>를 이용해 만튼 톡 쏘는 탄산음료입니다.
+                    <br>
+                    <br>
+                    <br>
+                </P>
+
+                    <h2>img 태그</h2>
+                    <img  src="./image/다운로드.jpg" alt="poo" width="300">
+                    <img  src="image/다운로드.jpg" alt="poo" width="300">
+
+                    <img  src="C:\Users\sba\Documents\github\sesac_ydp\02-html\image\다운로드.jpg" alt="poo" width="300">
+                    <!-- ./ 현재위치(tag.html) -->
+
+                    <!-- 인터넷 이미지 주소 지정 -->
+           <img src="https://search.pstatic.net/sunny/?src=http%3A%2F%2Fstatic.hubzum.zumst.com%2Fhubzum%2F2015%2F06%2F30%2F18%2F054723bf949d4cec93fed4ab05a89d23.jpg&type=sc960_832" alt="apple">
+
+
+
+           <button>
+           <a href="http://www.naver.com"> 네이버 바로가기 
+           </a>
+        </button>
+        <!-- a tag에 사용할 수 있는 target attribute: 링크가 열릴 위치 지정
+        _self (default): 현재 탭에서 열기 
+        _blank: 새 탭으로 열기-->
+
+        <button>
+            <a href="http://www.naver.com" target="_blank"> 네이버 바로가기 
+            </a>
+         </button>
+
+         <button>
+            <a href="http://www.naver.com" target="_blank" title="마우스를 올리면 나타나는 제목"> 네이버 바로가기 
+            </a>
+         </button>
+
+         <!-- a 태그의 href 속성 값으로는 인ㅇ터넷 상의 주소 뿐만 아니라 프로젝트 폴더 내의 다른 hTML 문서의 주소를 넣어도됨 -->
+
+         <a href="./test.html"> 시작하기 공부내용 보기 </a>
+
+
+
+
+        </body>
+</html>
