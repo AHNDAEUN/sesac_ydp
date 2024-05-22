@@ -1,0 +1,77 @@
+
+
+/* 하위(후손) 선택자 : 공백(띄어쓰기)로 구분 */
+
+body section{
+    /* 테부리(경계선): 두께. 선스타일(진한) 선색깔 */
+    border: 3px solid blue;
+}
+
+
+body section h2{
+
+    border: 1px solid green;
+}
+
+
+/* 자식 선택자 : <(x),  >(o) */
+
+
+.first > h2 {
+ 
+    color: white;
+    background-color: navy;
+
+}
+
+.second > h2 {
+
+
+    color: navy;
+    background-color: white;
+}
+
+
+/* 인접 형제 선택자 : + */
+
+/* 주의) lion이라는 아이디를 갖는 요소 바로 뒤에 li 태그가 있어야함
+
+인접은 말그대로 인접해야 있어야함 중간에  span태그 들어오면 선택되지 않음*/
+
+#lion +li {
+
+    background-color: aqua;
+
+}
+
+
+/* 일반 형제 선택자 : ~ 
+내가 지정한 부분 부터 형제들의 요소가 선택됨
+인접하지 않아도 뒤에 있는 모든 요소*/
+
+#lion ~ li {
+
+    color: #02ab02;
+}
+
+/*  css 색상 */
+
+
+/* #1 색상 키워드 : red. blue. aqua. white 
+
+#2 16진수 코드 (#xxxx)
+0~9,a~b,c,d,e,f : 16개의 기호로 표현
+-#ffffff : 흰색 <- red(ff), green(ff), blue(ff)
+-#000000: 검은색 <- red(00), green(00), blue(00)
+
+
+3/ rgb(0~255, 0~225, 0~225)
+
+- rgb(255, 255, 255); :white
+- rgb(0,0,0); : black
+
+<* 꿀팁 rgb에 마우스 커서를 대면 색깔 선택 가능 >
+
+*/
+
+

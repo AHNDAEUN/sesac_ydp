@@ -1,0 +1,19 @@
+li{
+    font-size: 30px;
+    color: white;
+    background-color: black;
+}
+
+
+#a{ background-color: blue;
+    width: 80px;
+    height: 80px;
+
+}
+
+#b{
+
+    background-color: skyblue;
+    width: 120px;
+    height: 50px;
+}

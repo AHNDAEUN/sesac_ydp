@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자</title>
+
+    <link rel="stylesheet" href="./select.css">
+</head>
+<body>
+    
+    <h1>  기본 선택자 연습해보기</h1>
+    <p> 기본 선택자 연습해보기 2</p>
+    <span> 안녕하세요</span>
+
+    <ol>
+
+        <!-- 꿀팁 li * 숫자 누르고 엔터 눌렀을 때 줄이 잡히는 최초에, 텝으로 다음 이동 가능   -->
+        <li id="first">1</li>
+        <li class="second">2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+
+
+    <ul>
+
+        <li class="big">소</li>  <!-- 한 요소에 클래스 하나 -->
+        <li class="big">강아지</li>
+        <li class="big">고양이</li>
+        <li class="small"> 토끼</li>
+        <l class="small">쥐</li>
+    </ul>
+
+
+<!-- class, id 속성의 올바른 사용법 -->
+
+<!-- 1. 한 요소에 여러 클래스 사용 0, 공백으로 구분  -->
+<!-- 클래스에 여러개의 요소를 쓰는 이유 : 공통적인 클래스 혹은 다른 클래스를 주고 싶을 때  -->
+    <p class="hello hi bong"> 안녕하세요</p>
+
+    <!-- 2. 한 요소에 하나의 id 사용  -->
+
+    <p id="my-hello"> 안녕하세요</p>
+
+    <!-- 한요소가 여러 클래스와 하나의 아이디를 사용 -->
+
+    <p class="hello hi bong"  id="my-hello"> 안녕하세요</p>
+
+
+    <!-- 한 요소가 여러 개의 아이디를 사용 x -->
+
+
+    <p id="one two">안녕하세요</p>
+</body>
+</html>
