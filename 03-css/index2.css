@@ -1,0 +1,32 @@
+/* 웹 폰트 (web-font) */
+
+/* 
+
+        -구글 웹 폰트, 눈누 웹 폰트
+        -모든 브라우저에서 보는 폰트를 통일
+        -폰트를 다운로드 하는 것이 아니라 link태그에 걸려 있는 주소에서
+        폰트를 가져오는 방식
+
+*/
+@font-face {
+        font-family: 'Ownglyph_eunbyul21-Rg';
+        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_eunbyul21-Rg.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+
+body {font-family: "Nanum Brush Script", cursive;}
+
+/* " font- family : postsen one, sans-serif;
+postsen One 사용, 없다면 sans-serif 대체   */
+
+h1{
+        font-family: 'Ownglyph_eunbyul21-Rg';
+
+}
+
+/* h1{
+
+        font-family:" Postsen One", sans-serif;
+} */
