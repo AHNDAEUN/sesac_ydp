@@ -1,0 +1,42 @@
+.d-inline1 {
+
+    display: inline;
+    background-color: indianred;
+
+
+}
+
+.d-inline2{ 
+    display: inline;
+    background-color: aqua;
+
+}
+
+.d-block1 {
+
+    display: block;
+    background-color: blueviolet;
+}
+
+.d-block2{
+
+    display: block;
+
+    background-color: coral;
+}
+
+.d-inline-block1 {
+
+    display: inline-block;
+    background-color: blue;
+}
+
+.d-inline-block2 {
+
+    display: inline-block;
+    background-color: darkorange;
+    width: 200px;
+    height: 300px;
+
+    margin: 20px 40px;
+}

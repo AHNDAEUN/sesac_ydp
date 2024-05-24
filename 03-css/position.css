@@ -1,0 +1,92 @@
+body{
+
+
+}
+
+
+
+div{
+
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+
+    text-align: center;
+    font-weight: 500px;
+}
+
+
+
+.position-static{
+
+    /* static- 기본값
+                 
+                기본값이기 때문에 작성하지 않더라도 적용
+                inline 요소: 왼 -> 오 쌓음
+                block 요소 : 위 -> 아래 쌓임
+    
+    */
+
+    background-color: palevioletred;
+    position: static;
+}
+
+.position-relative{
+
+
+    /* 
+    relative: 상대 위치
+              일반적인 흐름에 따라 배치
+               top, bottom, left, light 중 하나 이상 작성해야됨
+                원래 있어야 하는 위치 기준으로 top/ bottom/left/light씩 이동힘
+                배치(위치)가 바뀌어도 원래 기존 자리가 유지됨
+                보통 부모 요소로 많이 사용
+    
+    
+    */
+
+    background-color: aquamarine;
+    position: relative;
+    left: 100px;
+}
+
+.position-absolute{
+
+/*
+absolute: 절대위치
+          누구를 기준?으로 같이 움직임: position 속성을 갖는 제일 가까운 조상 기준
+          position속성을 갖는 조상이 없다면? body를 기준
+          특정 요소를 기준 삼아서 top botton left light 씩 움직이겠다
+          배치가 바뀌면 기존 자리가 없어짐
+
+*/
+
+    background-color: gold;
+
+    position: absolute;
+
+    /*fixed 사라짐: 앱솔르트와 겹쳐져서 안보여지는데 앱솔루트가 위에 붕 떠있음  */
+}
+
+.position-fixed{
+
+    /* 
+    fixed: 고정 위치
+
+    -viewport (브라우저의 화면 전체)를 기준으로 특정 위치 배치
+    -스크롤 되어도 움직이지 않음
+    -해더,푸더에 많이 사용
+    
+    
+    */
+
+    background-color: blueviolet;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+
+
+
+

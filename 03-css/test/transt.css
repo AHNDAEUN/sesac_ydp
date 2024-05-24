@@ -1,0 +1,36 @@
+.box {
+
+
+    width: 100px;
+    height: 100px;
+    overflow: auto;
+
+
+}
+
+.box:hover{
+
+        background-color: red;
+        transform: scale(3,3);
+        transition: transform 1s,0.5s;
+}
+
+
+
+
+
+
+.div1 {
+
+    background-color: gray;
+    position: relative;
+    width: 500px;
+    height: 500px;
+
+}
+
+img {
+
+    width: 50%;
+    height: 50%;
+}
