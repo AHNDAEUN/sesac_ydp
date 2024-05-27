@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.ball1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+
+    animation-name: ball;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+/* vw(가로), vh(세로) : viewPort 단위 */
+
+@keyframes ball {
+    0%{
+        transform: translate(0px);
+    }
+    25%{
+        transform: translate(calc(100vw - 100px), 0px);
+    }
+    50%{
+        transform: translate(calc(100vw - 100px), calc(100vh - 100px));
+    }
+    75%{
+        transform: translate(0, calc(100vh - 100px));
+    }
+    100%{
+        transform: translate(0,0);
+    }
+    
+}
+
+
+.text {
+
+    position: relative;
+    top: 0;
+    width: 100%;
+    animation-name: text;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes text {
+
+    0%{
+        margin-left: 100%;
+        width: 300%;
+        /* 내가 100 떨어질게 */
+    }
+
+    100%{
+        left: 0;
+        width: 100%;
+        /*100 -> 0 (시작)으로 다시 시작으로 돌아와 */
+    }
+    
+}

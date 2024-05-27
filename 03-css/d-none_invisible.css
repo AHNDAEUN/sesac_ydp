@@ -1,0 +1,32 @@
+.square {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    text-align: center;
+    display: inline-block;
+    line-height: 100px; /* (수직정렬) */
+    /* 
+    수직정렬 방법 중 하나
+    텍스트가 한 줄 일때, 요소의 height과 line-height가 일치하면 수직 정렬! 
+    */
+    
+
+
+}
+
+
+.d-none{
+    /* display: none; */
+    background-color: chartreuse;
+}
+
+.invisible {
+    /* visibility: hidden; */
+    background-color: aqua;
+}
+
+.opacity-0{
+    opacity: 0.6; /* (투명도 조절) */
+    background-color: crimson;
+}
+
