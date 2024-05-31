@@ -20,3 +20,6 @@ console.log(engScore);
 
 const avg=( (Number(mathScore)+Number(engScore))/2);
 console.log(avg);
+
+
+
