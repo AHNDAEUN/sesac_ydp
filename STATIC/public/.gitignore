@@ -1,0 +1,5 @@
+#  올리면 안되는 종류
+
+node_modules/
+*.log
+
