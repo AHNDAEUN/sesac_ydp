@@ -10,6 +10,3 @@
 // console.log(math.subtract(10,5))
 
 
-
-import add from './math.mjs';
-console.log(add(5,5));

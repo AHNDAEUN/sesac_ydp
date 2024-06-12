@@ -29,7 +29,12 @@
     // 모듈의 기초형태
 
     //()() 함수의 자동실행
-    (function(){
+    (function(){ 
         const superHero="Superman"
         console.log(superHero);
     })()
+
+   // 모듈의 형태
+    // (function (exports, require,module,__filename, __dirname){
+    //         코드
+    // })()

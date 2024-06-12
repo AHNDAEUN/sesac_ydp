@@ -4,7 +4,7 @@ console.log(fs);
 
 //fs.mkdir(path 경로, mode 모드, callback 콜백) // 디렉토리 만듬
 
-const path = require ('path')
+const path = require ('path') // 경로
 
 // fs.mkdir(path.join(__dirname,"test"),(err)=>{
 //  // 현재 디렉토리 안에, test 폴더 만들기
