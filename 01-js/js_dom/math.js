@@ -94,3 +94,13 @@ console.log(Math.random()*100);
 console.log(Math.floor(random()*101));
 
 console.log(Math.floor(Math.random() * 3)) + 20; // 20 <= x < 23 
+
+
+// 주말 숙제 내장 객체 실습
+
+//오늘은 주말일까? 평일일까?
+
+
+const day = new 
+
+
