@@ -77,7 +77,11 @@
             // => body에서도 json 형식으로 데이터를 바꾸어 보내야 함.
             fetch(`/fetch`, {
                 method: 'POST',
+<<<<<<< HEAD
                 headers: {
+=======
+                header: {
+>>>>>>> a0855f176b01709c156b2e4e32e79186ce6f790e
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(data), // js obj to json
@@ -89,7 +93,11 @@
                 .then((data) => {
                     console.log(data); // js obj
                     resultBox.textContent 
+<<<<<<< HEAD
                         = `POST /fetch 요청에 대한 응답 완료! ${data.name}님은 ${data.gender}이시죠?ㅎㅎ`;
+=======
+                        = `GET /fetch 요청에 대한 응답 완료! ${data.name}님은 ${data.gender}이시죠?ㅎㅎ`;
+>>>>>>> a0855f176b01709c156b2e4e32e79186ce6f790e
                     resultBox.style.color = 'hotpink';
                 });
         }
@@ -136,7 +144,11 @@
             axios({
                 method: 'GET',
                 // i) params 키를 이용하지 않는다면 요청 url에 query string을 작성
+<<<<<<< HEAD
                 url: `/axios?name=${form.name.value}&gender=${form.gender.value}`,
+=======
+                url: `/axios?name${form.name.value}&gender=${form.gender.value}`,
+>>>>>>> a0855f176b01709c156b2e4e32e79186ce6f790e
                 // ii) params 키를 이용하는 경우 
                 // url: '/axios',
                 // params: data,

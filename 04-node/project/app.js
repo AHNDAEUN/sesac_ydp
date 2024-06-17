@@ -65,6 +65,38 @@ app.get('/fetch',(req,res)=>{
 
 })
 
+
+//axios
+app.get('/axios',(req,res)=>{
+
+    console.log(req.query);
+    res.send(req.query);
+
+})
+
+app.post('/axios',(req,res)=>{
+
+    console.log(req.body);
+    res.send(req.body);
+
+})
+
+//fetch
+
+app.post('/fetch',(req,res)=>{
+
+    console.log(req.query);
+    res.send(req.query);
+
+})
+
+app.get('/fetch',(req,res)=>{
+
+    console.log(req.body);
+    res.send(req.body);
+
+})
+
 app.listen(PORT, () => {
     console.log(`Start server! http://localhost:${PORT}`);
 })
