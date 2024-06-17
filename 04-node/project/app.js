@@ -25,12 +25,12 @@ app.get('/ajax', (req,res)=>{
     //ex. http://localhost:3000/ajax?name=ade&getnder=여자
 
     console.log(req.query);
-    req.send(req.query);
+    res.send(req.query);
 })
 
 app.post('/ajax', (req,res)=>{
     console.log(req.body);
-    req.send(req.body);
+    res.send(req.body);
 })
 
 

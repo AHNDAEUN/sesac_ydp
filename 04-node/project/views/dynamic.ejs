@@ -89,7 +89,7 @@
                 .then((data) => {
                     console.log(data); // js obj
                     resultBox.textContent 
-                        = `GET /fetch 요청에 대한 응답 완료! ${data.name}님은 ${data.gender}이시죠?ㅎㅎ`;
+                        = `POST /fetch 요청에 대한 응답 완료! ${data.name}님은 ${data.gender}이시죠?ㅎㅎ`;
                     resultBox.style.color = 'hotpink';
                 });
         }
@@ -136,7 +136,7 @@
             axios({
                 method: 'GET',
                 // i) params 키를 이용하지 않는다면 요청 url에 query string을 작성
-                url: `/axios?name${form.name.value}&gender=${form.gender.value}`,
+                url: `/axios?name=${form.name.value}&gender=${form.gender.value}`,
                 // ii) params 키를 이용하는 경우 
                 // url: '/axios',
                 // params: data,
