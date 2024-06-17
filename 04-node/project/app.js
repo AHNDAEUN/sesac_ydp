@@ -49,6 +49,8 @@ app.post('/axios',(req,res)=>{
 
 })
 
+
+
 //fetch
 
 app.post('/fetch',(req,res)=>{
@@ -96,6 +98,8 @@ app.get('/fetch',(req,res)=>{
     res.send(req.body);
 
 })
+
+
 
 app.listen(PORT, () => {
     console.log(`Start server! http://localhost:${PORT}`);
