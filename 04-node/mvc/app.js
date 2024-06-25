@@ -8,7 +8,7 @@ app.set('views','./views')
 
 
 // /로 들어왔을 때 routes와 연결될 수 있게 등록
-const indexRouter= require('./routes/index');; // index는 생략 가능 
+const indexRouter= require('./routes/index'); // index는 생략 가능 
 app.use('/',indexRouter) // /경로와 indexRouter와 연결
  //->기본 요청 주소: localhostPORT 번호
 

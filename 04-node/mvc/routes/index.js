@@ -3,8 +3,7 @@ const router =express.Router();
 const cotroller= require('../controller/Cmain')
 // const {getMain,getComments,getComment}= require('../controller/Cmain')
 
-console.log('routes/index.js');
-console.log(cotroller);
+
 
 
 router.get('/',cotroller.getMain)
