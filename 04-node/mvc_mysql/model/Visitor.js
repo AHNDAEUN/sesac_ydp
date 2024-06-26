@@ -1,16 +1,11 @@
-// 임시  db로 부터 방명록 데이터를 받아옴
-
-// exports.getVisitors=()=>{
-
-//     return[
-
-//         {id: 1, name: 'aaaa', comment:'자고싶다'},
-
-//         {id: 2, name:'dddd',comment:'졸리다'},
-//     ];
-// };
-
 // [before]
+// (임시) DB로부터 방명록 데이터를 받아옴
+// exports.getVisitors = () => {
+//     return [
+//       { id: 1, name: '홍길동', comment: '내가 왔다.' },
+//       { id: 2, name: '이찬혁', comment: '으라차차' },
+//     ];
+// };    
 
 // [after]
 const mysql = require('mysql');
@@ -54,4 +49,26 @@ exports.postVisitor = (data, callback) => {
       callback(rows.insertId)
     }
   )
+}
+
+exports.deleteVisitor = (targetId, callback) => {
+  // targetId: 삭제해야할 visitor id
+  conn.query(`delete from visitor where id=${targetId}`, (err, rows) => {
+    if (err) {
+      throw err;
+    }
+
+    console.log('model/Visitor.js >> ', rows);
+    // OkPacket {
+    //   fieldCount: 0,
+    //   affectedRows: 1,
+    //   insertId: 0,
+    //   serverStatus: 2,
+    //   warningCount: 0,
+    //   message: '',
+    //   protocol41: true,
+    //   changedRows: 0
+    // }
+    callback(true); // 삭제
+  })
 }
