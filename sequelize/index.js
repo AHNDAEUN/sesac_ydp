@@ -6,6 +6,7 @@ const PORT= 8888;
 
 const router= require('./routes/index')
 const playerRouter= require('./routes/player')
+const teamRouter= require('./routes/team')
 const {sequelize}= require('./models')
 
 
@@ -17,6 +18,7 @@ app.use(express.json())
 
 app.use('/',router)
 app.use('/players',playerRouter)
+app.use('/teams',teamRouter)
 
 sequelize
 //force: true; 강제화 함: 서버실행 때마다 테이블을 재생성
