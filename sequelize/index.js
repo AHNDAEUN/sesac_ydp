@@ -5,6 +5,7 @@ const app= express();
 const PORT= 8888;
 
 const router= require('./routes/index')
+const playerRouter= require('./routes/player')
 const {sequelize}= require('./models')
 
 
@@ -15,11 +16,12 @@ app.use(express.json())
 
 
 app.use('/',router)
+app.use('/players',playerRouter)
 
 sequelize
 //force: true; 강제화 함: 서버실행 때마다 테이블을 재생성
 //force: flas; 서버 실행 시 테이블이 없으면 생성
-.sync({force: true})
+.sync({force: false})
 .then(()=>{
     app.listen(PORT,()=>{
         console.log('Database connection succeeded');
