@@ -1,3 +1,4 @@
+const { log } = require('console');
 const express = require('express');
 const http = require('http');
 const socketIO = require('socket.io');
@@ -13,7 +14,7 @@ app.set('view engine', 'ejs');
 
 // 라우터
 app.get('/', (req, res) => {
-    res.render('client');
+    res.render('client1');
 })
 
 // [4] 유저 리스트
@@ -71,6 +72,12 @@ function getUserList(room) {
 }
 
 
+    //[5] 채팅방 리스트
+    //채팅방 목록 초기화
+
+    const roomList = [];
+
+
 
 
 
@@ -80,6 +87,12 @@ io.on('connection', (socket) => {
     // 웹 브라우저가 접속이 되면 고유한 id 값이 생성됨.
     // ==> socket.id 로 확인 가능.
     console.log("서버 연결 완료 ::" , socket.id);
+
+
+    //[5] 채팅방 목록 미리보기
+    // 전부에게 보여져야함
+    io.emit('roomList',roomList); 
+
 
     // [2] 채팅방 만들기
     socket.on('create', (res) => {
@@ -100,13 +113,45 @@ io.on('connection', (socket) => {
         // 나를 제외한 모든 방 사람들에게 메세지 전달.
         socket.to(res.roomName).emit('notice', `${socket.userName} 님이 입장하셨습니다.`)
 
+       
+
         // [4] 유저 리스트 갱신
         const userList = getUserList(res.roomName);
         console.log('userList >>>> ', userList);
         io.to(res.roomName).emit('userList', userList)
+
+
+         // [5] 채팅방 목록 갱신
+         if(!roomList.includes(res.roomName)){
+            // 중복이 아니라면 추가
+            roomList.push(res.roomName); // 이름 저장
+
+            //갱신된 목록
+            console.log("res.roomName[5]>>", roomList);
+            io.emit('roomList',roomList)
+
+        }
     })
 
-    
+
+        //[6] 메세지 전송
+        socket.on('sendMessage',(res)=>{
+            console.log('sendMessage>>',res);
+            const{message, user, select} = res // 구조분해 할당 
+            //res 객체에서 속성 추출하여 각각 변수에 할당
+            if(select ==='all'){
+                // 특정 방의 전체 사용자에게 메세지 보내기
+                io.to(socket.roomName).emit('newMessage',{  message,user, dm:false })
+            }else{
+                // 나머지는 특정 방의 dm 대상자에게 메세지 보냄
+                io.to(select).emit('newMessage',{message,user,dm:true}); // 지정된 자가 있음
+                // 자기 자신에게 메시지 보내기 (나한테 보이게)
+                socket.emit('newMessage',{message,user,dm:true}) // 지정된 자가 없음
+                
+            }
+        })
+     
+
 })
 
 
